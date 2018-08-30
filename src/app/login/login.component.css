@@ -5,3 +5,7 @@
     
 
 }
+
+.centered-layout{
+    margin-top: calc(8% - 10px);
+}

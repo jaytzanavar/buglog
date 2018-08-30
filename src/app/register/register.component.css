@@ -27,5 +27,13 @@
 .right-addon input { padding-right: 30px; }
 
 .centered-layout{
-    margin: calc(20% - 130px);
+    margin-top: calc(8% - 10px);
+}
+
+.registerPanel{
+    background: white;
+    padding: 5% ;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    
+
 }

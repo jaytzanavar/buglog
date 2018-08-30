@@ -1,38 +1,47 @@
-<div class="row centered-layout">
-    <div class="col-md-6 mx-auto">
-        <div class="card rounded-0">
-            <div class="card-header">
-                <h3 class="mb-0">Register</h3>
-            </div>
-            <div class="card-body">
-                <form action="" class="form">
-                    <div class="form-group">
-                        <label for="" >Email</label>
-                        <input type="text" class="form-control rounded-0" [ngModel]="registerUserData.email" name="email" required>
-                    </div>    
-                    <div class="form-group">
-                            <label for=""> Password </label>
-                            <div class="input-group mb-2 mr-sm-2 mb-sm-0 inner-addon right-addon ">
-                                    <i (click)="toggleToText()" [ngClass]='showPassword.checked ? "fa fa-eye-slash": "fa fa-eye "' class=" glyphicon"></i>
-                                    <input [type]="showPassword.checked ? 'text' : 'password'"  [ngModel]="registerUserData.password" name="password" class="form-control rounded-0" required>
+<div class=" centered-layout">
+        <div class="col-md-6 mx-auto ">
+            <div class="card rounded-0 registerPanel centered-layout">
+                <div class="card-header">
+                    <h3 class="mb-0 text-center">Eγγραφτείτε στο BugLog</h3>
+                </div>
+                <div class="card-body">
+                        <form action="" class="form">
+                            <div class="form-group">
+                                <label for="" >Email</label>
+                                  <div class="input-group mb-2 mr-sm-2 mb-sm-0 ">
+                                                <div class="input-group-addon glyphicon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                                                <input type="text" class="form-control rounded-0" [(ngModel)]="registerUserData.email" name="email" required>
+                                    </div>  
+                            </div>    
+                            <div class="form-group">
+                                    <label for=""> Password </label>
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                            
+                                                <div class="input-group mb-2 mr-sm-2 mb-sm-0 inner-addon right-addon ">
+                                                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                                                        <i (click)="toggleToText()" [ngClass]='showPassword.checked ? "fa fa-eye-slash": "fa fa-eye "' class=" glyphicon"></i>
+                                                        <input [type]="showPassword.checked ? 'text' : 'password'"  [(ngModel)]="registerUserData.password" name="password" class="form-control rounded-0" required>
+                                                </div>
+                                     </div>
+
+
+                            
+                            
+                            <div class="form-group mt-2">
+                                <label for="">Confirm Password </label>
+                                <div class="input-group mb-2 mr-sm-2 mb-sm-0 inner-addon right-addon ">
+                                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                                        <input [type]="showPassword.checked ? 'text' : 'password'"  [(ngModel)]="registerUserData.passwordCheck" name="password" class="form-control rounded-0" required>
+                                </div>
+                            </div>
+                                
                             </div>
 
-
-                       
-                       
-                        
-                        <label for="">Confirm Password </label>
-                        <div class="input-group mb-2 mr-sm-2 mb-sm-0 inner-addon right-addon ">
-                                
-                                <input [type]="showPassword.checked ? 'text' : 'password'"  [ngModel]="registerUserData.password" name="password" class="form-control rounded-0" required>
-                        </div>
-                        
-                    </div>
-
-                    <button (click)=registerUser() type="button" class="btn btn-primary float-right">Register</button>
-                </form>
+                            <button (click)='registerUser()' type="button" class="btn btn-primary float-right">Register</button>
+                        </form>
+                </div>
                 
             </div>
         </div>
-    </div>
+    
 </div>
