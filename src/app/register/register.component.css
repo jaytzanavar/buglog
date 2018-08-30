@@ -1,0 +1,31 @@
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  
+  z-index: 1000;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.glyphicon:active{
+    color: #16c7da;
+    text-shadow: 3px 3px 5px  #bfdde0;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.centered-layout{
+    margin: calc(20% - 130px);
+}
